@@ -6,7 +6,7 @@ function min(c, g) {
     return c < g ? c : g;
 }
 
-console.log(min(15, 30));
+console.log(min(15, 30));  // Answer: 15
 
 // 2. Write a function that takes the radius of a circle and outputs it’s approximate circumference (the formula for circumference is 2 *pi * radius, you may use 3.14 for pi).
 // Example Output:
@@ -16,9 +16,20 @@ function calculateMath(radius) {
     return 2 * pi * radius; // formula: 2 * pi * radius:  radius=20, 
 }
 
-console.log(calculateMath(20));
+console.log(calculateMath(20)); // Answer: 125.60000000000001
 
 // 3. Write a function searchString that takes a character and then returns how many times it appears in another string argument.
 // Example Output:
 // console.log(searchString(“s”, “mississippi”)); // will output 4
 // console.log(searchString(“q”, “mississippi”)); // will output 0
+function letterCount(char, str) {
+    let white = 0;
+    for (let b = 0; b <str.length; b++) {
+        if (str[b] === char) {
+            white++;
+        }
+    }
+    return white;
+}
+
+console.log(letterCount("s", "senselessness"));  // Answer: 6
